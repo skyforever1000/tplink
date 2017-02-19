@@ -1,0 +1,44 @@
+<!--
+refere here for form style: http://getbootstrap.com/css/#forms
+-->
+<!-- Modal -->
+<div class="modal fade group-add-edit" tabindex="-1" role="dialog" id="groupModal" id= "groupModal" aria-labelledby="myModalLabel" backdrop="static" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Group</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" ng-model="group.title" id="title" >
+          </div>
+<!--          <div class="form-group">
+            <label>Contact List</label>
+            <div class="input-group has-success">
+              <input class="form-control">
+              <div class="input-group-btn">
+                <button class="btn btn-default" data-toggle="modal" data-target=".contact-add-edit"
+                  data-dismiss="modal">Create</button>
+                <button class="btn btn-default" ng-click="addContact(contact.id)" >Add</button>
+              </div>
+            </div>
+            <span class="help-block">use keywords to retrieve the contact, add '.has-success' if found, use '.has-error' if no found</span>
+            <div class="list-group" style="height: 200px; overflow-y: auto">
+              <div class="list-group-item" ng-repeat="contactId in group.contactList">
+                {{contactId | getContactFullName}}
+              </div>
+            </div>
+          </div> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="update(group, 'Group');" data-dismiss="modal" ng-if="!groupInsertMode">Update</button>
+        <button type="button" class="btn btn-primary" ng-if="groupInsertMode" data-dismiss="modal" ng-click="add(group, 'Group');">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="panel panel-default group-detail-view" ng-if="selectedItem && !selectedItem.firstName">
+  <div class="panel-heading">
+    <div class="pull-right panel-action">
+      <span class="link" title="add user under group" ng-click="addUser(selectedItem.id, 'Group')" data-toggle="modal" data-target=".contact-add-edit">
+        <i class="glyphicon glyphicon-user text-danger"></i></span>
+      <span class="link" title="remove group" ng-click="remove(selectedItem.id, 'Group')">
+        <i class="glyphicon glyphicon-trash text-danger"></i></span>
+      <span class="link" title="edit group" data-toggle="modal" data-target=".group-add-edit"
+        ng-click="modal(id, 'Group');groupInsertModeChange(false, id);">
+        <i class="glyphicon glyphicon-pencil text-info"></i>
+      </span>
+    </div>
+    <h3>{{selectedItem.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <div ng-if="selectedItem.contactList.length" 
+      ng-repeat="contactItemId in selectedItem.contactList track by $index" class="col-sm-4">
+      <!-- bug 
+      <div ng-init="contact = (contactItemId | getContactObj)">
+        <div ng-include="'app/home/view/contact/contact-item.html'"></div>
+      </div>
+      -->
+      <div ng-include="'app/home/view/contact/contact-item-in-group-detail.html'"></div>
+    </div>
+    <div ng-if="!selectedItem.contactList.length">
+      Empty Group
+    </div>
+  </div>
+</div><!-- group detail view -->

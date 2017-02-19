@@ -1,0 +1,47 @@
+<div class="header" ng-include="'app/home/view/common/header.html'"></div>
+<div class="main container">
+  
+  <div class="list-view col-sm-3">
+    <h2>List</h2>
+    <div class="list-group">
+      <span class="list-group-item">
+        <form>
+          <div class="form-group" style="margin-bottom: 0px">
+            <input class="form-control" placeholder="filter by keywords" ng-model="keywords" 
+              ng-change="filterResult(keywords)"/>
+          </div>
+        </form>
+      </span>
+      <a href="javascript:;" class="list-group-item" ng-repeat="contact in contacts track by $index">
+        <h4 class="list-group-item-heading" ng-click="select(contact, 'contact')">
+          {{contact.firstName}} {{contact.lastName}}
+        </h4>
+      </a>
+      <a class="list-group-item list-group-item-info" data-toggle="modal" data-target=".group-add-edit" ng-click="groupInsertModeChange(true)">
+      	 <h4>
+          New Group
+        </h4>
+      </a>
+      <a href="javascript:;" class="list-group-item list-group-item-warning" ng-repeat="group in groups track by $index">
+        <h4 class="list-group-item-heading" ng-click="select(group)">
+          <i class="glyphicon glyphicon-tag"></i>
+          {{group.title}}
+        </h4>
+      </a>
+      <span class="list-group-item list-group-item-info" ng-if="!groups.length && !contacts.length">
+        <h4>No Result</h4>
+      </span>
+    </div>
+  </div>
+  <div class="detail-view col-sm-9">
+    <h2>Detail</h2>
+    <div ng-include="'app/home/view/contact/contact-detail-view.html'"></div>
+    <div ng-include="'app/home/view/group/group-detail-view.html'"></div>
+    <div ng-include="'app/home/view/common/empty-select-view.html'"></div>
+  </div>
+
+  <div class="modals" ng-init="contact = selectedItem">
+    <div ng-include="'app/home/view/contact/contact-add-edit.html'"></div>
+    <div ng-include="'app/home/view/group/group-add-edit.html'"></div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="pull-right panel-action">
+      <span class="link" ng-click="removeFromGroup(selectedItem.id, contactItemId)">
+        <i class="glyphicon glyphicon-trash text-danger"></i>
+      </span>
+      <span class="link" data-toggle="modal" data-target=".contact-add-edit" ng-if="false"
+        ng-click="modal(contactItemId, 'Contact');updateUser();">
+        <i class="glyphicon glyphicon-pencil text-info"></i>
+      </span>
+    </div>
+    <h4>{{contactItemId | getContactFullName}}</h4>
+  </div>
+  <div class="panel-body">
+    <div>{{contactItemId | getContactAddress}}</div>
+    <div>{{contactItemId | getContactPhone}}</div>
+  </div>
+</div>

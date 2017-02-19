@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="pull-right panel-action">
+      <span class="link" ng-click="remove(contact.id, 'Contact')" >
+        <i class="glyphicon glyphicon-trash text-danger"></i>
+      </span>
+      <span class="link" data-toggle="modal" data-target=".contact-add-edit" ng-click="updateUser(contact.id, 'Contact');modal(contact, 'Contact')">
+        <i class="glyphicon glyphicon-pencil text-info"></i>
+      </span>
+    </div>
+    <h4>{{ (contact.firstName + " " + contact.lastName).trim() || "Unknown" }}</h4>
+  </div>
+  <div class="panel-body">
+    <div>{{contact.address || "Unknown"}}</div>
+    <div>{{contact.phone || "Unknown"}}</div>
+  </div>
+</div>

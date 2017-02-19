@@ -1,0 +1,41 @@
+<!--
+refere here for form style: http://getbootstrap.com/css/#forms
+-->
+<!-- Modal -->
+<div class="modal fade contact-add-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" backdrop="static" id="contactModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Contact</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>First Name</label>
+            <input class="form-control" ng-model="contact.firstName" id="firstName" required/>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input class="form-control" ng-model="contact.lastName" id="lastName"required/>
+          </div>
+          <div class="form-group">
+            <label>Address</label>
+            <input class="form-control" ng-model="contact.address" id="address"/>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input class="form-control" ng-model="contact.phone" id ="phone"required/>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" 
+          ng-click="update(contact, 'Contact')" ng-if="!contactInsertMode">Update</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" 
+          ng-click="add(contact, 'Contact')" ng-if ="contactInsertMode">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+/* APP */
+.main.container {
+    margin-top: 70px;
+}
+/* MODULE-GROUP */
+.detail-view .panel-heading h3,
+.contact-detail-view .panel-heading h4,
+.group-detail-view .panel-heading h4 {
+    margin: 0px;
+}
+/* GENERAL */
+.link {
+    cursor: pointer;
+}
+.panel-action {
+    display:none;
+}
+.panel-heading:hover > .panel-action {
+    display:block;
+}
