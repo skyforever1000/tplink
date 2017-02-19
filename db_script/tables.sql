@@ -31,11 +31,11 @@ insert into tplink.group (_groupId, _groupName, _status, _versionId) values(defa
 insert into tplink.group  (_groupId, _groupName, _status, _versionId) values(default, 'friend', default, default);
 insert into tplink.group  (_groupId, _groupName, _status, _versionId)  values(default, 'work', default, default);
 
-insert into tplink.User values(null, '650-960-5771', 'John', 'Zhang', default, '452 elm dr', 13, default);
-insert into tplink.User values(null, '650-960-5772', 'Ben', 'Chen', default, '2200 rubino dr', 13, default);
-insert into tplink.User values(null, '650-960-5773', 'Chris', 'Yuan', default, '1302 el moro', 13, default);
-insert into tplink.User values(null, '650-960-5774', 'Mike', 'Lee', default, '550 s 9th st', 14, default);
-insert into tplink.User values(null, '650-960-5775', 'Curry', 'Lau', default, '768 de anza',14, default);
-insert into tplink.User values(null, '650-960-5776', 'Jessie', 'Wang', default, '4600 rosewood dr', 15, default);
+insert into tplink.User values(null, '650-960-5771', 'John', 'Zhang', default, '452 elm dr', 1, default);
+insert into tplink.User values(null, '650-960-5772', 'Ben', 'Chen', default, '2200 rubino dr', 1, default);
+insert into tplink.User values(null, '650-960-5773', 'Chris', 'Yuan', default, '1302 el moro', 1, default);
+insert into tplink.User values(null, '650-960-5774', 'Mike', 'Lee', default, '550 s 9th st', 2, default);
+insert into tplink.User values(null, '650-960-5775', 'Curry', 'Lau', default, '768 de anza',2, default);
+insert into tplink.User values(null, '650-960-5776', 'Jessie', 'Wang', default, '4600 rosewood dr', 3, default);
 
 
